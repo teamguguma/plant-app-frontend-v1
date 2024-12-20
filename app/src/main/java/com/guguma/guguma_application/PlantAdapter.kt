@@ -58,10 +58,8 @@ class PlantAdapter(
 
         // 클릭 이벤트: 상세 화면 이동 또는 체크박스 상태 변경
         holder.itemView.setOnClickListener {
-                plant.isSelected = !plant.isSelected
                 val intent = Intent(context, AddPlantActivity::class.java).apply {
                     putExtra("plantName", plant.name)
-                    putExtra("plantNickname", plant.nickname)
                     putExtra("plantImageUrl", plant.imageUrl)
                 }
                 context.startActivity(intent)

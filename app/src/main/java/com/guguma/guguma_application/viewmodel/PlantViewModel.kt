@@ -75,9 +75,8 @@ class PlantViewModel : ViewModel() {
 
             val id = item.getLong("id") // id를 Long 타입으로 가져옴
             val name = item.getString("name")
-            val nickname = item.getString("nickname")
             val imageUrl = item.getString("imageUrl")
-            plantList.add(PlantDto(id, name, nickname, imageUrl))
+            plantList.add(PlantDto(id, name,  imageUrl))
         }
 
         return plantList
